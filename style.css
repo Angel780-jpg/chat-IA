@@ -1,0 +1,41 @@
+body {
+  background-color: #334eac;
+}
+
+.stage {
+  display: flex;
+}
+
+.chat-panel {
+  background-color: #7096d1;
+  text-align: right;
+}
+
+.portrait-panel {
+  text-align: left;
+}
+
+.character {
+  position: relative;
+  width: 280px;
+  height: 280px;
+}
+
+.expresion {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.character.feliz .feliz,
+.character.enojada .enojada,
+.character.triste .triste,
+.character.neutral .neutral {
+  opacity: 1;
+}
