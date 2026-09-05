@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat IA</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="stage">
+      <section class="portrait-panel">
+        <div class="character"></div>
+        <p class="char-name">Chat IA</p>
+        <p class="mood-label" id="moodLabel">tranquila</p>
+      </section>
+
+      <section class="chat-panel">
+        <div class="messages" id="messages"></div>
+
+        <form id="chatForm">
+          <input
+            type="text"
+            id="usertext"
+            placeholder="Escribe algo..."
+            autocomplete="off"
+            required
+          />
+          <button type="submit" id="sendButton">Enviar</button>
+        </form>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
