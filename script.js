@@ -31,7 +31,6 @@ function addTypingIndicator() {
 function setEmotion(emotion) {
   const emociones = ["feliz", "enojada", "triste", "neutral"];
 
-  // quita cualquier clase de emoción anterior
   emociones.forEach((e) => characterEl.classList.remove(e));
 
   const emocionValida = emociones.includes(emotion) ? emotion : "neutral";
@@ -55,7 +54,6 @@ function parseModelJSON(rawText) {
 }
 
 async function sendToGemini(userText) {
-  // agregamos el mensaje del usuario al historial ANTES de enviarlo
   history.push({ role: "user", parts: [{ text: userText }] });
 
   const res = await fetch("/api/chat", {
