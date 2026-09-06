@@ -60,11 +60,15 @@ body {
   box-shadow: 0 15px 40px rgba(180, 120, 150, 0.15);
 }
 
-.character img.expresion.active {
-  opacity: 1;
-}
-
-.character img.expresion.neutral {
+/* Antes había dos reglas separadas (.active y .neutral) que no
+   coincidían con las clases que realmente pone el JS, y la regla
+   .neutral se quedaba fija en opacity: 1 sin importar el estado.
+   Ahora cada imagen solo se muestra cuando SU clase coincide con
+   la clase que el JS le puso al contenedor .character. */
+.character.feliz .expresion.feliz,
+.character.enojada .expresion.enojada,
+.character.triste .expresion.triste,
+.character.neutral .expresion.neutral {
   opacity: 1;
 }
 
